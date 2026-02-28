@@ -275,8 +275,8 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 6rem 1.5rem 4rem;
-  overflow-x: hidden;   /* allow vertical overflow */
+  overflow: hidden;
+  padding: 0;
 }
 
 /* Animated gradient mesh background */
@@ -313,7 +313,7 @@ section {
   z-index: 1;
   text-align: center;
   padding: 2rem 1.5rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -352,16 +352,18 @@ section {
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 8vw, 5.5rem);
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.15;
-  display: inline-block;
-  padding-bottom: 0.2em;
+  line-height: 1;
+  margin-bottom: 1.25rem;
   background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroIn 0.8s ease forwards 0.4s;
 }
 
 .hero-subtitle {
