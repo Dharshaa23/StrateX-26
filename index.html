@@ -859,6 +859,50 @@
 
   <!-- JavaScript — loaded at end of body for performance -->
   <script src="main.js"></script>
-
+  <script>
+  const ctx = document.getElementById('judgingChart');
+  
+  new Chart(ctx, {
+      type: 'pie',
+      data: {
+          labels: [
+              'Innovation',
+              'Technical Feasibility',
+              'Impact',
+              'Scalability',
+              'Presentation Quality'
+          ],
+          datasets: [{
+              data: [20, 20, 20, 20, 20],
+              backgroundColor: [
+                  '#3b82f6',
+                  '#6366f1',
+                  '#8b5cf6',
+                  '#06b6d4',
+                  '#0ea5e9'
+              ],
+              borderWidth: 0
+          }]
+      },
+      options: {
+          responsive: true,
+          plugins: {
+              legend: {
+                  position: 'bottom',
+                  labels: {
+                      color: '#cbd5e1',
+                      font: {
+                          size: 14
+                      }
+                  }
+              }
+          },
+          animation: {
+              animateScale: true,
+              duration: 1200
+          }
+      }
+  });
+  </script>
 </body>
 </html>
