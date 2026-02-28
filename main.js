@@ -202,7 +202,7 @@ const BACKEND_URL = 'http://localhost:5000';   // ← change this when you deplo
 
 /* ─────────────────────────────────────
    JUDGING CRITERIA: PROGRESS BAR ANIMATION
-───────────────────────────────────── */
+───────────────────────────────────── 
 (function initProgressBars() {
   const fills = document.querySelectorAll('.progress-fill');
   const observer = new IntersectionObserver((entries) => {
@@ -214,7 +214,7 @@ const BACKEND_URL = 'http://localhost:5000';   // ← change this when you deplo
     });
   }, { threshold: 0.5 });
   fills.forEach(f => observer.observe(f));
-})();
+})(); ---*/
 
 
 /* ─────────────────────────────────────
