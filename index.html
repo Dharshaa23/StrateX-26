@@ -13,6 +13,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
@@ -485,74 +486,24 @@
   </section>
 
 
-  <!-- ══════════════════════════════════════
-       7. JUDGING CRITERIA
-  ══════════════════════════════════════ -->
-  <section id="judging">
-    <div class="container">
-      <div style="text-align:center;max-width:560px;margin:0 auto 1rem;">
-        <span class="section-label fade-up">Scoring</span>
-        <h2 class="section-title fade-up delay-1">Judging Criteria</h2>
-        <p class="section-subtitle fade-up delay-2" style="margin:0 auto;">
-          Each team is scored out of 100 points, with each criterion carrying equal weight.
-        </p>
-      </div>
-
-      <div class="criteria-list" id="criteriaList">
-
-        <div class="criteria-item fade-up delay-1">
-          <div class="criteria-header">
-            <span class="criteria-name">Innovation</span>
-            <span class="criteria-pct">20%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" data-target="20"></div>
-          </div>
-        </div>
-
-        <div class="criteria-item fade-up delay-2">
-          <div class="criteria-header">
-            <span class="criteria-name">Technical Feasibility</span>
-            <span class="criteria-pct">20%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" data-target="20"></div>
-          </div>
-        </div>
-
-        <div class="criteria-item fade-up delay-3">
-          <div class="criteria-header">
-            <span class="criteria-name">Impact</span>
-            <span class="criteria-pct">20%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" data-target="20"></div>
-          </div>
-        </div>
-
-        <div class="criteria-item fade-up delay-4">
-          <div class="criteria-header">
-            <span class="criteria-name">Scalability</span>
-            <span class="criteria-pct">20%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" data-target="20"></div>
-          </div>
-        </div>
-
-        <div class="criteria-item fade-up delay-5">
-          <div class="criteria-header">
-            <span class="criteria-name">Presentation Quality</span>
-            <span class="criteria-pct">20%</span>
-          </div>
-          <div class="progress-track">
-            <div class="progress-fill" data-target="20"></div>
-          </div>
-        </div>
-
-      </div>
+ <!-- ══════════════════════════════════════
+     7. JUDGING CRITERIA
+══════════════════════════════════════ -->
+<section id="judging">
+  <div class="container">
+    <div style="text-align:center;max-width:560px;margin:0 auto 2rem;">
+      <span class="section-label fade-up">Scoring</span>
+      <h2 class="section-title fade-up delay-1">Judging Criteria</h2>
+      <p class="section-subtitle fade-up delay-2" style="margin:0 auto;">
+        Each team is scored out of 100 points, with equal weightage across all criteria.
+      </p>
     </div>
-  </section>
+
+    <div class="chart-wrapper fade-up delay-3">
+      <canvas id="judgingChart"></canvas>
+    </div>
+  </div>
+</section>
 
 
   <!-- ══════════════════════════════════════
