@@ -313,7 +313,7 @@ section {
   z-index: 1;
   text-align: center;
   padding: 2rem 1.5rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -352,7 +352,7 @@ section {
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 5vw, 5.5rem);
+  font-size: clamp(2rem, 5.5vw, 5.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.15;
