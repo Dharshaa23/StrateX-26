@@ -270,12 +270,13 @@ section {
    HERO SECTION
 ═══════════════════════════════════════════════════ */
 #hero {
-  padding-top: 8rem;
-  min-height: 100vh;   /* allow expansion */
-  padding-top: 6rem;   /* space for navbar */
-  padding-bottom: 4rem;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 6rem 1.5rem 4rem;
+  overflow-x: hidden;   /* allow vertical overflow */
 }
 
 /* Animated gradient mesh background */
@@ -351,20 +352,16 @@ section {
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(3.5rem, 9vw, 7.5rem);
+  font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.2;
+  line-height: 1.15;
   display: inline-block;
   padding-bottom: 0.2em;
-  margin-bottom: 1.25rem;
   background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: heroIn 0.8s ease forwards 0.4s;
 }
 
 .hero-subtitle {
