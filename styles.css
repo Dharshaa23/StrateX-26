@@ -270,6 +270,7 @@ section {
    HERO SECTION
 ═══════════════════════════════════════════════════ */
 #hero {
+  overflow: hidden;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -309,6 +310,7 @@ section {
 }
 
 .hero-content {
+  overflow: visible;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -352,16 +354,18 @@ section {
 
 .hero-title {
   font-family: 'Syne', sans-serif;
-  font-size: clamp(2.2rem, 8vw, 6.5rem); /* reduced min & max */
+  font-size: clamp(3.5rem, 9vw, 7.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.1; /* IMPORTANT: prevent vertical clipping */
+  line-height: 1;
   margin-bottom: 1.25rem;
-  padding-right: 0.05em; /* prevents right-side cut */
   background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroIn 0.8s ease forwards 0.4s;
 }
 
 .hero-subtitle {
