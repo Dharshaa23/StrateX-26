@@ -270,14 +270,12 @@ section {
    HERO SECTION
 ═══════════════════════════════════════════════════ */
 #hero {
-  overflow: hidden;
-  min-height: 100vh;
+  padding-top: 8rem;
+  min-height: 100vh;   /* allow expansion */
+  padding-top: 6rem;   /* space for navbar */
+  padding-bottom: 4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  padding: 0;
 }
 
 /* Animated gradient mesh background */
@@ -310,7 +308,6 @@ section {
 }
 
 .hero-content {
-  overflow: visible;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -357,7 +354,9 @@ section {
   font-size: clamp(3.5rem, 9vw, 7.5rem);
   font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1;
+  line-height: 1.2;
+  display: inline-block;
+  padding-bottom: 0.2em;
   margin-bottom: 1.25rem;
   background: linear-gradient(135deg, #fff 40%, rgba(255,255,255,0.6) 100%);
   -webkit-background-clip: text;
