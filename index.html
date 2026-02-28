@@ -860,10 +860,38 @@
   <!-- JavaScript — loaded at end of body for performance -->
   <script src="main.js"></script>
   <script>
+  const centerTextPlugin = {
+    id: 'centerText',
+    beforeDraw(chart) {
+        const { width } = chart;
+        const { height } = chart;
+        const ctx = chart.ctx;
+
+        ctx.restore();
+        const fontSize = (height / 120).toFixed(2);
+        ctx.font = `600 ${fontSize}em Syne`;
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "#ffffff";
+
+        const text = "100";
+        const textX = Math.round((width - ctx.measureText(text).width) / 2);
+        const textY = height / 2 - 10;
+        ctx.fillText(text, textX, textY);
+
+        ctx.font = `400 0.9em DM Sans`;
+        ctx.fillStyle = "#94a3b8";
+        const subText = "Points";
+        const subTextX = Math.round((width - ctx.measureText(subText).width) / 2);
+        ctx.fillText(subText, subTextX, textY + 28);
+
+        ctx.save();
+    }
+  };
+  
   const ctx = document.getElementById('judgingChart');
   
   new Chart(ctx, {
-      type: 'pie',
+      type: 'doughnut',
       data: {
           labels: [
               'Innovation',
@@ -881,11 +909,13 @@
                   '#06b6d4',
                   '#0ea5e9'
               ],
-              borderWidth: 0
+              borderWidth: 0,
+              hoverOffset: 12
           }]
       },
       options: {
           responsive: true,
+          cutout: '65%',
           plugins: {
               legend: {
                   position: 'bottom',
@@ -898,10 +928,11 @@
               }
           },
           animation: {
-              animateScale: true,
-              duration: 1200
+              duration: 1400,
+              easing: 'easeOutQuart'
           }
-      }
+      },
+      plugins: [centerTextPlugin]
   });
   </script>
 </body>
