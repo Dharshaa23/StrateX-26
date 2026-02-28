@@ -30,7 +30,7 @@
    ▸ Production → set to your Render/Railway URL
      e.g. 'https://stratex-26.onrender.com'
 ───────────────────────────────────────────────────────────── */
-const BACKEND_URL = 'http://127.0.0.1:5000';   // ← change this when you deploy Flask
+const BACKEND_URL = 'http://localhost:5000';   // ← change this when you deploy Flask
 
 
 /* ─────────────────────────────────────
