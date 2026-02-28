@@ -863,28 +863,28 @@
   const centerTextPlugin = {
     id: 'centerText',
     beforeDraw(chart) {
-        const { width } = chart;
-        const { height } = chart;
-        const ctx = chart.ctx;
+        const { ctx, chartArea } = chart;
 
-        ctx.restore();
-        const fontSize = (height / 120).toFixed(2);
-        ctx.font = `600 ${fontSize}em Syne`;
-        ctx.textBaseline = "middle";
-        ctx.fillStyle = "#ffffff";
+        if (!chartArea) return;
 
-        const text = "100";
-        const textX = Math.round((width - ctx.measureText(text).width) / 2);
-        const textY = height / 2 - 10;
-        ctx.fillText(text, textX, textY);
-
-        ctx.font = `400 0.9em DM Sans`;
-        ctx.fillStyle = "#94a3b8";
-        const subText = "Points";
-        const subTextX = Math.round((width - ctx.measureText(subText).width) / 2);
-        ctx.fillText(subText, subTextX, textY + 28);
+        const centerX = (chartArea.left + chartArea.right) / 2;
+        const centerY = (chartArea.top + chartArea.bottom) / 2;
 
         ctx.save();
+
+        // Main Text
+        ctx.font = "600 36px Syne";
+        ctx.fillStyle = "#ffffff";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText("100", centerX, centerY - 10);
+
+        // Sub Text
+        ctx.font = "400 14px DM Sans";
+        ctx.fillStyle = "#94a3b8";
+        ctx.fillText("Points", centerX, centerY + 18);
+
+        ctx.restore();
     }
   };
   
