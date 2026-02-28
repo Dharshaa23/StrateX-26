@@ -376,6 +376,12 @@ section {
   animation: heroIn 0.8s ease forwards 0.6s;
 }
 
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+  }
+}
 @keyframes heroIn {
   to { opacity: 1; transform: translateY(0); }
 }
