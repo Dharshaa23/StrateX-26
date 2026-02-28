@@ -1702,3 +1702,13 @@ footer {
   border-radius: 2px;
   margin: 1.25rem 0 1.75rem;
 }
+/* Pie Chart Styling */
+
+.chart-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
