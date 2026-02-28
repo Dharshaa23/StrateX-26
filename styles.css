@@ -1702,13 +1702,20 @@ footer {
   border-radius: 2px;
   margin: 1.25rem 0 1.75rem;
 }
-/* Pie Chart Styling */
+
+/* Premium Donut Chart */
 
 .chart-wrapper {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  background: var(--surface);
+  padding: 2.5rem;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.01)
+  );
   border: 1px solid var(--border);
-  border-radius: 18px;
+  border-radius: 24px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
